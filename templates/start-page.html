@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'css/start_page/start-page.css' %}"/>
+    <title>Get Fit</title>
+</head>
+<body>
+<header class="head">
+    <nav class="nav-head">
+        <ul id="nav-items">
+            <li id="logo"><a href="">GetFit</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="description">
+    <h1>THE ULTIMATE FITNESS APP</h1>
+    <button class="btn"> Get Started</button>
+</section>
+</body>
+</html>
