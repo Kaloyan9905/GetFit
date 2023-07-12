@@ -17,14 +17,18 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="description">
     <h1>THE ULTIMATE FITNESS APP</h1>
-    <button class="btn"> Get Started</button>
+    {% if request.user.is_authenticated %}
+        <a class="btn" href="{% url 'main page' %}"> Get Started</a>
+    {% else %}
+        <a class="btn" href="{% url 'login' %}"> Get Started</a>
+    {% endif %}
 </section>
 </body>
 </html>

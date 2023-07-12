@@ -1,8 +1,8 @@
 from django.urls import path
 
-from GetFit.web.views import IndexView, login
+from GetFit.web.views import IndexView, main_page
 
-urlpatterns = (
+urlpatterns = [
     path('', IndexView.as_view(), name='index'),
-    path('login/', login, name='login'),
-)
+    path('main/', main_page, name='main page'),
+]
